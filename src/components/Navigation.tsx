@@ -17,6 +17,11 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsMobileMenuOpen(false);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -25,6 +30,7 @@ const Navigation = () => {
   };
 
   const navLinks = [
+    { label: "HOME", id: "home" },
     { label: "ABOUT", id: "about" },
     { label: "RESUME", id: "resume" },
     { label: "SKILLS", id: "skills" },
@@ -44,13 +50,13 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <Link
+            to="/"
             className="text-sm font-bold flex items-center gap-2"
           >
             <span className="text-primary">&gt;_</span>
             <span className="text-primary">Charanraj M</span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
