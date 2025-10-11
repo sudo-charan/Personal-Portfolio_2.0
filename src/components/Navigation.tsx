@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();  // To detect current page
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,16 +18,21 @@ const Navigation = () => {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
+    }
   };
 
   const navLinks = [
     { label: "ABOUT", id: "about" },
-    { label: "PROJECTS", id: "projects" },
+    { label: "RESUME", id: "resume" },
     { label: "SKILLS", id: "skills" },
+    { label: "PROJECTS", id: "projects" },
     { label: "CONTACT", id: "contact" },
   ];
+
+  const isProfilePage = location.pathname === "/profile";
 
   return (
     <nav
@@ -50,18 +57,18 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => isProfilePage ? window.location.href = `/#${link.id}` : scrollToSection(link.id)}
                 className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors"
               >
                 <span className="text-primary">&gt;</span> {link.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/profile"
               className="ml-4 px-6 py-2 bg-primary text-background font-bold text-sm hover:bg-primary/90 transition-colors"
             >
               PROFILE
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,12 +87,19 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => isProfilePage ? window.location.href = `/#${link.id}` : scrollToSection(link.id)}
                 className="block w-full text-left py-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors"
               >
                 <span className="text-primary">&gt;</span> {link.label}
               </button>
             ))}
+            <Link
+              to="/profile"
+              className="block w-full text-left py-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="text-primary">&gt;</span> PROFILE
+            </Link>
           </div>
         )}
       </div>
