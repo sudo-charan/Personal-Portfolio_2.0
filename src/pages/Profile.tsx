@@ -67,7 +67,7 @@ const Profile = () => {
                     {profileData.about}
                   </p>
 
-                  <div className="space-y-4 text-muted-foreground">
+                  <div className="flex flex-col md:flex-row md:gap-8 text-muted-foreground">
                     <p className="flex items-center justify-center md:justify-start">
                       <Calendar className="w-5 h-5 text-primary mr-2" />
                       <strong>DOB:</strong> {profileData.dob}

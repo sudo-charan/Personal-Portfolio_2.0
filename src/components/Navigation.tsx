@@ -38,8 +38,8 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/90 backdrop-blur-md border-b border-border" 
-          : "bg-transparent md:bg-transparent md:backdrop-blur-none backdrop-blur-sm bg-background/80"
+          ? "bg-black/90 backdrop-blur-md border-b border-border md:border-b-0" 
+          : "bg-black md:bg-transparent md:backdrop-blur-none backdrop-blur-sm md:border-b-0 border-b border-border"
       }`}
     >
       <div className="container mx-auto px-4">
