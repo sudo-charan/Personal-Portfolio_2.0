@@ -94,7 +94,7 @@ const Resume = () => {
                         <MapPin className="w-4 h-4 mr-1" />
                         {exp.location}
                       </p>
-                      <p className={`flex items-center mt-1 ${exp.type === 'Remote' ? 'text-green-500' : 'text-blue-500'}`}>
+                      <p className="text-muted-foreground flex items-center mt-1">
                         {exp.type === 'Remote' ? <Globe className="w-4 h-4 mr-1" /> : <Home className="w-4 h-4 mr-1" />}
                         {exp.type}
                       </p>
