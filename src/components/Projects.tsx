@@ -16,20 +16,6 @@ const projects = [
     github: "https://github.com/sudo-charan/image_search_engine",
     demo: "https://image-search-engine-tawny-zeta.vercel.app/",
   },
-  {
-    title: "Analytics Dashboard",
-    description: "Data visualization platform with interactive charts and insights",
-    tech: ["React", "D3.js", "Python", "FastAPI"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Social Media App",
-    description: "Modern social platform with messaging and content sharing",
-    tech: ["React Native", "Firebase", "Redux", "Node.js"],
-    github: "#",
-    demo: "#",
-  },
 ];
 
 const Projects = () => {
@@ -99,13 +85,14 @@ const Projects = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold"
+            <a
+              href="https://github.com/sudo-charan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold text-sm transition-colors"
             >
               VIEW ALL PROJECTS
-            </Button>
+            </a>
           </div>
         </div>
       </div>

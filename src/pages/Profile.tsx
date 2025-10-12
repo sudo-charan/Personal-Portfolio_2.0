@@ -2,19 +2,18 @@ import { Calendar, Download, User, Heart } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const Profile = () => {
-  // Placeholder data - customize these with your actual details
   const profileData = {
     name: "Charanraj M",
-    dob: "June 30, 2003",  // Date of Birth
-    year: "22",  // Year (e.g., birth year or relevant year)
-    image: "/4e7f2084-8092-4d1a-a420-a6630b80a446.jpg",  // Path to your profile image in public/
-    resumeUrl: "/Charanraj-M-Resume.pdf",  // Updated to match your file name
+    dob: "June 30, 2003",
+    year: "22",
+    image: "/4e7f2084-8092-4d1a-a420-a6630b80a446.jpg",
+    resumeUrl: "/Charanraj-M-Resume.pdf",
     about: "Passionate full-stack developer with expertise in modern web technologies. I enjoy building innovative solutions and exploring new tech trends. Always eager to learn and collaborate on exciting projects.",  // Added: Short About (2-3 lines)
     interests: [
       "Exploring new technology, gadgets, and innovations",
       "Listening to music",
       "Watching movies and anime",
-    ],  // Added: Interests & Hobbies
+    ],
   };
 
   const handleDownloadResume = () => {

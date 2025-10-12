@@ -12,9 +12,9 @@ const LoadingScreen = () => {
           clearInterval(timer);
           return 100;
         }
-        return prevProgress + 2;  // Increment by 2 every 20ms for ~1.5s total (75 steps * 20ms = 1500ms)
+        return prevProgress + 2;
       });
-    }, 20);  // Reduced interval from 50ms to 20ms
+    }, 20);
 
     return () => clearInterval(timer);
   }, []);

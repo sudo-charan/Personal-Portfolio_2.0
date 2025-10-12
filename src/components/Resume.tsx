@@ -7,7 +7,7 @@ const Resume = () => {
       company: "Elevate Labs",
       location: "Banglore, India",
       period: "Jun 2025 - Jul 2025",
-      type: "Remote",  // Added: "Onsite" or "Remote"
+      type: "Remote",
       description: "Completed a remote Java Developer Internship at Elevate Labs, where I developed and optimized JavaFX-based applications, integrated MySQL databases, and collaborated in an agile development environment.",
     },
     {
@@ -15,10 +15,9 @@ const Resume = () => {
       company: "Zephyr Technology and Solutions Pvt. Ltd.",
       location: "Manglore, India",
       period: "Jan 2024 - Apr 2024",
-      type: "Onsite",  // Added: "Onsite" or "Remote"
+      type: "Onsite",
       description: " Contributed to the development of dynamic web applications, enhancing performance",
     },
-    // Add more experiences as needed
   ];
 
   const education = [
@@ -53,12 +52,12 @@ const Resume = () => {
       period: "2019 - 2021",
       description: "Completed secondary education, building a strong foundation in core subjects and extracurricular activities.",
     },
-    // Add more education entries as needed
   ];
 
   return (
-    <section id="resume" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="resume" className="py-20 bg-background grid-background relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none"></div>
+      <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-2">

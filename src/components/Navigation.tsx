@@ -101,10 +101,10 @@ const Navigation = () => {
             ))}
             <Link
               to="/profile"
-              className="block w-full text-left py-2 text-sm font-bold text-muted-foreground hover:text-primary transition-colors"
+              className="block w-full text-center py-3 px-4 border border-primary/80 bg-primary/60 text-background font-bold text-sm hover:bg-primary/90 transition-colors border border-primary/20 mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <span className="text-primary">&gt;</span> PROFILE
+              <span className="text-background">&gt;</span> PROFILE
             </Link>
           </div>
         )}

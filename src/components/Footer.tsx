@@ -7,7 +7,7 @@ const Footer = () => {
             <span className="text-primary">&gt;</span> Built with React, TypeScript & Tailwind CSS
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            © {new Date().getFullYear()} Developer Portfolio. All rights reserved.
+            © {new Date().getFullYear()} All Rights Reserved. Made by <span className="text-primary font-medium">Charanraj M</span>.
           </p>
         </div>
       </div>
