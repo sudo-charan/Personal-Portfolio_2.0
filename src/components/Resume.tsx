@@ -44,14 +44,6 @@ const Resume = () => {
       period: "2019 - 2021",
       description: "Completed pre-university studies in Commerce, developing foundational knowledge in accounting, economics, and business principles.",
     },
-
-    {
-      degree: "Secondary School",
-      institution: "Shri Ramakrishna High School",
-      location: "Puttur, India",
-      period: "2019 - 2021",
-      description: "Completed secondary education, building a strong foundation in core subjects and extracurricular activities.",
-    },
   ];
 
   return (
